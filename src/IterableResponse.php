@@ -9,7 +9,7 @@ class IterableResponse
 	private $raw;
 	private $length = 0;
 
-	function __construct( array $response )
+	function __construct( array $response = [ ] )
 	{
 		$this->items = [ ];
 

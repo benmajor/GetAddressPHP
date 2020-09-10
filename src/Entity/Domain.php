@@ -2,17 +2,22 @@
 
 namespace BenMajor\GetAddressPHP\Entity;
 
-use BenMajor\GetAddressPHP\Exception\AddressException;
+use BenMajor\GetAddressPHP\Exception\DomainException;
 
 class Domain extends Entity
 {
-	private $id;
-	private $name;
+	protected $id;
+	protected $name;
 
-	public function __construct( $domain )
+	public function __construct( string $domain, $id = null )
 	{
-		$this->id = $domain->id;
-		$this->name = $domin->name;
+		if( ! filter_var($domain, FILTER_VALIDATE_URL) )
+		{
+			throw new DomainException('Specified domain name is invalid.');
+		}
+
+		$this->id = $id;
+		$this->name = $domain;
 	}
 
 	public function __toString()

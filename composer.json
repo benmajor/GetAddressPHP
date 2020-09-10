@@ -1,5 +1,28 @@
 {
+    "name": "benmajor/getaddress-php",
+    "description": "PHP SDK for the excellent GetAddress.io postcode lookup service.",
+    "type": "library",
     "require": {
-        "guzzlehttp/guzzle": "^7.0"
-    }
+        "guzzlehttp/guzzle": "^7.0",
+        "php": "^7.2.5",
+        "ext-json": "*"
+    },
+    "keywords": [
+        "framework",
+        "http",
+        "rest",
+        "web service",
+        "curl",
+        "client",
+        "HTTP client",
+        "PSR-7",
+        "PSR-18"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Major",
+            "email": "ben.major88@gmail.com"
+        }
+    ]
 }

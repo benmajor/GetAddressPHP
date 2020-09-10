@@ -6,17 +6,17 @@ use BenMajor\GetAddressPHP\Exception\AddressException;
 
 class PrivateAddress extends Entity
 {
-	private $id;
+	protected $id;
 
-	private $line1;
-	private $line2;
-	private $line3;
-	private $line4;
+	protected $line1;
+	protected $line2;
+	protected $line3;
+	protected $line4;
 
-	private $locality;
-	private $townOrCity;
-	private $county;
-	private $postcode;
+	protected $locality;
+	protected $townOrCity;
+	protected $county;
+	protected $postcode;
 
 	public function __construct( string $postcode, $address = null )
 	{

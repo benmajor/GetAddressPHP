@@ -4,9 +4,9 @@ namespace BenMajor\GetAddressPHP\Entity;
 
 class Suggestion extends Entity
 {
-	private $address;
-	private $id;
-	private $url;
+	protected $address;
+	protected $id;
+	protected $url;
 
 	public function __construct( $suggestion, string $baseURL )
 	{

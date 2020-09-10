@@ -2,6 +2,8 @@
 
 namespace BenMajor\GetAddressPHP\Entity;
 
+use BenMajor\GetAddressPHP\Exception\EntityException;
+
 class Entity
 {
 	# Magic getter:
@@ -15,7 +17,7 @@ class Entity
 			
 			if( ! property_exists($this, $property) )
 			{
-				throw new AddressException(
+				throw new EntityException(
 					sprintf('Property %s does not exist in Entity.', $property)
 				);
 			}

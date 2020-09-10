@@ -6,26 +6,26 @@ use BenMajor\GetAddressPHP\Exception\AddressException;
 
 class Address extends Entity
 {
-	private $buildingName;
-	private $buildingNumber;
-	private $subBuildingName;
-	private $subBuildingNumber;
+	protected $buildingName;
+	protected $buildingNumber;
+	protected $subBuildingName;
+	protected $subBuildingNumber;
 
-	private $thoroughfare;
-	private $line1;
-	private $line2;
-	private $line3;
-	private $line4;
+	protected $thoroughfare;
+	protected $line1;
+	protected $line2;
+	protected $line3;
+	protected $line4;
 
-	private $locality;
-	private $townOrCity;
-	private $county;
-	private $district;
-	private $country;
+	protected $locality;
+	protected $townOrCity;
+	protected $county;
+	protected $district;
+	protected $country;
 
-	private $postcode;
+	protected $postcode;
 
-	private $formatted;
+	protected $formatted;
 
 	public function __construct( $address, string $postcode = null )
 	{

@@ -6,11 +6,11 @@ use BenMajor\GetAddressPHP\Exception\UnitException;
 
 class DistanceResult extends Entity
 {
-	private $raw;
+	protected $raw;
 
-	private $from;
-	private $to;
-	private $distance;
+	protected $from;
+	protected $to;
+	protected $distance;
 
 	protected $allowedMeasurements = [
 		'm', 'metres', 'meters',
