@@ -200,11 +200,16 @@ class Client
 	# GET: /subscription 
 	public function subscription()
 	{
-		return $this->sendRequest(
+		$info = $this->sendRequest(
 			'subscription',
 			[ ],
+			true,
+			'get',
+			null,
 			true
 		);
+
+		return new Entity\SubscriptionInfo($info);
 	}
 
 	# Add a new address
